@@ -16,26 +16,32 @@ import
   Icon
 from 'react-native-vector-icons/FontAwesome';
 
-const facebook = (
-    <Icon.Button
-        name="facebook"
-        backgroundColor="#3b5998"
-    >
-        Login with Facebook
-    </Icon.Button>
-);
+
+
 
 export default class Login extends Component{
+
+    
+    loginWithFacebook(){
+        alert("tesing");
+    };
+
     render(){
-        return(
-            <Icon.Button
-                name="facebook"
-                backgroundColor="#3b5998"
-                onPress={alert("testing")}
-                style = {style.Icons}
-            >
-                Login with Facebook
+        const facebook = (
+            <Icon.Button 
+                name = "facebook" 
+                backgroundColor = "#3b5998"
+                onPress={this.loginWithFacebook}>
+                <Text style={style.Icons}>
+                    Login with Facebook
+                </Text>
             </Icon.Button>
+        );
+        return(
+
+            <View style = {style.container}>
+                {facebook}
+            </View>
         )
     }
 }
@@ -43,11 +49,15 @@ export default class Login extends Component{
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 22,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    texts:{
+        alignContent: 'center',
+        justifyContent: 'center'
     },
     Icons: {
-        flex: 1,
-        alignSelf: 'center',
-
+        padding: 5,
+  	    borderRadius: 5,
     }
 })

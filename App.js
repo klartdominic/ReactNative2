@@ -35,6 +35,7 @@ export default class Touchables extends Component {
           <View style={styles.button}>
             <Text style={styles.buttonText}>TouchableOpacity</Text>
           </View>
+          
         </TouchableOpacity>
         <TouchableNativeFeedback
             onPress={this._onPressButton}

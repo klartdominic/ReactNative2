@@ -12,6 +12,7 @@
 // export const myAction = payload => action(types.MY_ACTION_TYPE, payload);
 import React, { Component } from 'react';
 import { ScrollView, Image, Text } from 'react-native';
+import Login from './src/screens/Login.js'
 
 export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
   render() {
@@ -21,39 +22,7 @@ export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component
       height: 100 ,
     };
     return (
-      <ScrollView>
-        <Text style={{fontSize:96}}>Scroll me plz</Text>
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Text style={{fontSize:96}}>If you like</Text>
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Text style={{fontSize:96}}>Scrolling down</Text>
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Text style={{fontSize:96}}>What's the best</Text>
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Text style={{fontSize:96}}>Framework around?</Text>
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Image source={ reactLogoPic } />
-        <Text style={{fontSize:80}}>React Native</Text>
-      </ScrollView>
+      <Login/>
     );
   }
 }

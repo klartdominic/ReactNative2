@@ -39,6 +39,7 @@ export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component
         <Text style={{fontSize:96}}>Scrolling down</Text>
         <Image source={ reactLogoPic } />
         <Image source={ reactLogoPic } />
+        
         <Image source={ reactLogoPic } />
         <Image source={ reactLogoPic } />
         <Text style={{fontSize:96}}>What's the best</Text>

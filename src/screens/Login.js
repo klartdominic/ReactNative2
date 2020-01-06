@@ -3,45 +3,51 @@ import
     { Component } 
 from "react";
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import
     {
+        SafeAreaView,
         ScrollView,
         StyleSheet,
         Text,
-        View
+        View,
+        StatusBar,
+        TextInput,
     }
 from 'react-native';
 
-import
-  Icon
-from 'react-native-vector-icons/FontAwesome';
-
-
-
+import Facebook from './facebook.js'
 
 export default class Login extends Component{
-
-    
-    loginWithFacebook(){
-        alert("tesing");
-    };
-
+    constructor(props){
+        super(props);
+        this.state = {text: ''};
+    }
     render(){
-        const facebook = (
-            <Icon.Button 
-                name = "facebook" 
-                backgroundColor = "#3b5998"
-                onPress={this.loginWithFacebook}>
-                <Text style={style.Icons}>
-                    Login with Facebook
-                </Text>
-            </Icon.Button>
-        );
         return(
-
-            <View style = {style.container}>
-                {facebook}
-            </View>
+            <SafeAreaView>
+            <ScrollView>
+                <View style = {style.container}>
+                    <TextInput 
+                        style={style.textinput}
+                        inlineImageLeft = "search_icon"
+                        placeholder="Username/Email" 
+                        // onChangeText={(text) => this.setState({text})}
+                    >
+                    </TextInput>
+                    <TextInput 
+                        style = {style.textinput}
+                        inlineImageLeft = 'lock_icon'
+                        placeholder = "Password"
+                    >
+                    </TextInput>
+                </View>
+                <View style = {style.container}>
+                    <Facebook/>
+                </View>
+            </ScrollView>
+            </SafeAreaView>
         )
     }
 }
@@ -53,11 +59,11 @@ const style = StyleSheet.create({
         alignItems: 'center',
     },
     texts:{
-        alignContent: 'center',
-        justifyContent: 'center'
+        textAlign: 'right',
     },
-    Icons: {
-        padding: 5,
-  	    borderRadius: 5,
-    }
+    textinput:{
+        width: 300,
+        textAlign: 'left',
+        borderWidth: 1,
+    },
 })

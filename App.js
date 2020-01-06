@@ -11,7 +11,7 @@
 
 // export const myAction = payload => action(types.MY_ACTION_TYPE, payload);
 import React, { Component } from 'react';
-import { ScrollView, Image, Text } from 'react-native';
+import { ScrollView, Image, Text, StatusBar } from 'react-native';
 import Login from './src/screens/Login.js'
 
 export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
@@ -22,6 +22,7 @@ export default class IScrolledDownAndWhatHappenedNextShockedMe extends Component
       height: 100 ,
     };
     return (
+      
       <Login/>
     );
   }
